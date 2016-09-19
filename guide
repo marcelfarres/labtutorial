@@ -33,6 +33,9 @@ git add '*.txt'
 # after we add all we want to this commit, we can set a message that will help to identify the changes
 git commit -m "This is the message that will appear for each commit"
 
+# add & commit with message
+git commit -am "Delete stuff"
+
 # We want to know what is happening! 
 # Basic Information
 git log
@@ -66,7 +69,7 @@ git stash [save [--patch] [-k|--[no-]keep-index] [-q|--quiet]
 git diff 
 
 # I was doing some work at home, how I update this computer?
-git pull origin master # or other name
+git pull --rebase origin master # or other name
 # At this point it merge (if possible) the local and remote changes
 # And solve the problems (later on)
 # How I can see the changes?
@@ -92,6 +95,33 @@ git branch my_new_fancy_branch
 git checkout my_new_fancy_branch
 # You can do it all toghether 
 git checkout -b new_branch
+
+# Publish new branch to the remote
+git push -u origin <branch>
+
+# I want to remove files/folders
+# files
+git rm '*.txt'
+# folders
+git rm -r folder_of_cats
+
+# I want to get all the information from the remote
+git fetch -all
+
+# I want to list all the branches I have
+git branch
+
+# I want to merge 2 branches
+git checkout [where will be merge]
+git merge [feature branch that we want to join with master]
+
+# delete the branch
+git branch -d [name]
+# force to delete
+git branch -D 
+git branch -d -f 
+
+# 
 
 
 # DO NOT FORGET 
