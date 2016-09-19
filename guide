@@ -27,6 +27,27 @@ git status
 git add -A
 # remove changes for one specific file 
 git reset <filename>
-
+# add specific extensions Files
+git add '*.txt'
 
 # after we add all we want to this commit, we can set a message that will help to identify the changes
+git commit -m "This is the message that will appear for each commit"
+
+# We want to know what is happening! 
+# Basic Information
+git log
+# Detail Information
+git log --summary
+
+# Do you want to go online? 
+git remote add origin https://github.com/marcelfarres/labtutorial.git
+
+git push -u origin master
+
+
+# DO NOT FORGET 
+   bisect     Use binary search to find the commit that introduced a bug
+   grep       Print lines matching a pattern
+   log        Show commit logs
+   show       Show various types of objects
+   status     Show the working tree status
