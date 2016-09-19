@@ -36,6 +36,9 @@ git commit -m "This is the message that will appear for each commit"
 # add & commit with message
 git commit -am "Delete stuff"
 
+# and if you want to remove the commit 
+git revert HEAD / [commit name]
+
 # We want to know what is happening! 
 # Basic Information
 git log
@@ -121,12 +124,10 @@ git branch -d [name]
 git branch -D 
 git branch -d -f 
 
-# 
+# Extra 
+# add interactive
+git add -i
 
 
 # DO NOT FORGET 
    bisect     Use binary search to find the commit that introduced a bug
-   grep       Print lines matching a pattern
-   log        Show commit logs
-   show       Show various types of objects
-   status     Show the working tree status
