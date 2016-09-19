@@ -40,9 +40,58 @@ git log
 git log --summary
 
 # Do you want to go online? 
+# Add remote
 git remote add origin https://github.com/marcelfarres/labtutorial.git
-
+# Push changes
 git push -u origin master
+
+# But I don't want to apply some changes ... 
+# simple stash changes
+git stash
+# simple get back the changes
+git stash apply
+
+# List staged
+git stash List
+git stash show [stash@{n}]
+git stash drop  [stash@{n}]
+git stash pop [stash@{n}]
+git stash apply [stash@{n}]
+git stash save "message"
+# Complete options
+git stash [save [--patch] [-k|--[no-]keep-index] [-q|--quiet]
+		       [-u|--include-untracked] [-a|--all] [<message>]]
+
+# Do you want to see the changes between last commit and now? 
+git diff 
+
+# I was doing some work at home, how I update this computer?
+git pull origin master # or other name
+# At this point it merge (if possible) the local and remote changes
+# And solve the problems (later on)
+# How I can see the changes?
+# See if there are changes to commit
+git status 
+# See the changes itself
+git diff HEAD
+# add the changes
+git add -A
+# See the staged changes 
+git diff --staged
+# But you realize that this changes where wrong! 
+# Remove the changes 
+git reset <filename>
+# Unstage the changes
+git checkout -- <filename>
+
+
+# I am working with something new non related. 
+# Create a new branch 
+git branch my_new_fancy_branch
+# Go to this new branch
+git checkout my_new_fancy_branch
+# You can do it all toghether 
+git checkout -b new_branch
 
 
 # DO NOT FORGET 
