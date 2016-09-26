@@ -4,6 +4,8 @@ git init
 # Status of the repo
 git status
 
+askjdhf asdf 
+
 # we make some changes in the repo
 # if we call git status again -> different message.
 # different status
